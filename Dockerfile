@@ -312,7 +312,7 @@ RUN apt-get clean && \
 RUN chmod +x ./plugins/yangster/extension/server/bin/yang-language-server
 
 USER theia
-EXPOSE 3000
+EXPOSE 3001
 # Configure Theia
 ENV SHELL=/bin/bash \
     THEIA_DEFAULT_PLUGINS=local-dir:/home/theia/plugins  \
@@ -322,4 +322,4 @@ ENV SHELL=/bin/bash \
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
-ENTRYPOINT [ "node", "/home/theia/src-gen/backend/main.js", "/home/project", "--hostname=0.0.0.0" ]
+ENTRYPOINT [ "node", "/home/theia/src-gen/backend/main.js", "/home/project", "--hostname=127.0.0.1" ]
