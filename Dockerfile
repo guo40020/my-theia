@@ -312,7 +312,7 @@ RUN apt-get clean && \
 RUN chmod +x ./plugins/yangster/extension/server/bin/yang-language-server
 
 USER theia
-EXPOSE 3001
+EXPOSE 3000
 # Configure Theia
 ENV SHELL=/bin/bash \
     THEIA_DEFAULT_PLUGINS=local-dir:/home/theia/plugins  \
